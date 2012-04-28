@@ -253,7 +253,7 @@ class EasybookReloadedControllerEntry extends JController
                 $errors = implode(", ", $errors_output);
 
                 $msg = JText::sprintf('COM_EASYBOOKRELOADED_PLEASE_VALIDATE_YOUR_INPUTS', $errors);
-                $link = JRoute::_('index.php?option=com_easybookreloaded&controller=entry&task=add&retry=true', false);
+                $link = JRoute::_('index.php?option=com_easybookreloaded', false);
                 $type = 'notice';
 
                 $session->clear('errors', 'easybookreloaded');

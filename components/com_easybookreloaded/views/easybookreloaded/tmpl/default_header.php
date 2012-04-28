@@ -28,7 +28,7 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
     <div class="easy_entrylink">
         <?php
-        if(_EASYBOOK_CANADD AND !$this->params->get('offline'))
+        if(_EASYBOOK_CANADD AND !$this->params->get('offline') AND false)
         {
             echo "<a class=\"sign\" href='".JRoute::_('index.php?option=com_easybookreloaded&controller=entry&task=add')."' style=\"text-decoration: none !important;\">";
             echo "<strong>".JText::_('COM_EASYBOOKRELOADED_SIGN_GUESTBOOK');

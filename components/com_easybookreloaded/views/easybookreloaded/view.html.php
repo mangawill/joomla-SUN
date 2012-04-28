@@ -62,6 +62,7 @@ class EasybookReloadedViewEasybookReloaded extends JView
                     .png { behavior: url('.JURI::base().'components/com_easybookreloaded/scripts/pngbehavior.htc); }
     		</style>
   		<![endif]-->');
+        $document->addScript(JURI::base().'components/com_easybookreloaded/scripts/startup.js');
 
         // Get some Data
         $entries = $this->get('Data');

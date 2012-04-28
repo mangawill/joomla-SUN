@@ -32,12 +32,13 @@ else
 {
     echo $this->loadTemplate('header');
     echo $this->loadTemplate('entries');
+    echo '<div id="entry_container"></div>';
 
     if($this->params->get('show_count_entries'))
     {
         ?>
         <div>
-            <br /><strong class='easy_pagination'><?php echo $this->count ?><br />
+            <br /><strong class='easy_pagination'><?php echo $this->count ?>
                 <?php
                 if($this->count == 1)
                 {
