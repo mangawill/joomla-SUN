@@ -91,6 +91,28 @@
 				<option
 					value="1">JYES</option>
 		</field>
+		
+		<field name="phone" type="text" 
+		label="Mobile" 
+		description="Mobile" 
+		class="inputbox"/>
+        
+        <field name="currency" type="list" 
+        label="Currency" 
+        description="Currency" 
+        class="inputbox">
+                <option value="RMB">RMB</option>
+        </field>
+        
+        <field name="getpassword" type="text" 
+        label="Get Password" 
+        description="Get Password" 
+        class="inputbox"/>
+        
+        <field name="qq" type="text" 
+        label="QQ" 
+        description="QQ" 
+        class="inputbox"/>
 
 		<field
 			name="id"

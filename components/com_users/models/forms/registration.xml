@@ -9,7 +9,6 @@
 			/>
 
 		<field name="name" type="text"
-			description="COM_USERS_REGISTER_NAME_DESC"
 			filter="string"
 			label="COM_USERS_REGISTER_NAME_LABEL"
 			message="COM_USERS_REGISTER_NAME_MESSAGE"
@@ -19,7 +18,6 @@
 
 		<field name="username" type="text"
 			class="validate-username"
-			description="COM_USERS_DESIRED_USERNAME"
 			filter="username"
 			label="COM_USERS_REGISTER_USERNAME_LABEL"
 			message="COM_USERS_REGISTER_USERNAME_MESSAGE"
@@ -74,6 +72,28 @@
 			size="30"
 			validate="equals"
 		/>
+		
+		<field name="phone" type="text" 
+        label="Mobile" 
+        description="Mobile" 
+        class="inputbox"/>
+        
+        <field name="currency" type="list" 
+        label="Currency" 
+        description="Currency" 
+        class="inputbox">
+                <option value="RMB">RMB</option>
+        </field>
+        
+        <field name="getpassword" type="text" 
+        label="Get Password" 
+        description="Get Password" 
+        class="inputbox"/>
+        
+        <field name="qq" type="text" 
+        label="QQ" 
+        description="QQ" 
+        class="inputbox"/>
 
 		<field
 			name="captcha"
