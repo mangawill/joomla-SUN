@@ -26,6 +26,7 @@
 					<option value="0">MOD_DJIMAGESLIDER_FOLDER</option>
 					<option value="1">MOD_DJIMAGESLIDER_COMPONENT</option>
 				</field>
+                <field name="itemid" type="text" label="Itemid" default="0" />
 				<field name="slider_type" type="list" default="0" label="MOD_DJIMAGESLIDER_SLIDER_TYPE" description="MOD_DJIMAGESLIDER_SLIDER_TYPE_DESC">
 					<option value="0">MOD_DJIMAGESLIDER_HORIZONTAL</option>
 					<option value="1">MOD_DJIMAGESLIDER_VERTICAL</option>

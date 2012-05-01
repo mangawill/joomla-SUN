@@ -80,7 +80,7 @@ class modDJImageSliderHelper
 		$slides = $db->loadObjectList();
 		
 		foreach($slides as $slide){
-			$slide->link = modDJImageSliderHelper::getSlideLink($slide);
+			$slide->link = modDJImageSliderHelper::getSlideLink($slide, $params);
 			$slide->description = modDJImageSliderHelper::getSlideDescription($slide, $params->get('limit_desc'));
 			$slide->alt = $slide->title;
 			$slide->target = modDJImageSliderHelper::getSlideTarget($slide->link);
@@ -89,7 +89,7 @@ class modDJImageSliderHelper
 		return $slides;
     }
 	
-	static function getSlideLink(&$slide) {
+	static function getSlideLink(&$slide, $params) {
 		$slide_params = new JRegistry($slide->params);
 		$link = '';
 		$db = JFactory::getDBO();
@@ -123,7 +123,12 @@ class modDJImageSliderHelper
 					$item = $model->getItem($artid);
 					if($item) {
 						$item->slug = $item->alias ? ($item->id . ':' . $item->alias) : $item->id;
-						$link = JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid));
+						$itemid = $params->get('itemid', 0);
+						if($itemid) {
+							$link = JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid).'&amp;Itemid='.$itemid);
+						} else {
+							$link = JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid));
+						}
 					}
 				}
 				break;
