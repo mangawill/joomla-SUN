@@ -27,7 +27,7 @@
 
 // no direct access
 defined('_JEXEC') or die ('Restricted access'); ?>
-
+<div id="djslider-block<?php echo $mid; ?>">
 	<div id="djslider-loader<?php echo $mid; ?>" class="djslider-loader">
     <div id="djslider<?php echo $mid; ?>" class="djslider">
         <div id="slider-container<?php echo $mid; ?>" class="slider-container">
@@ -82,12 +82,6 @@ defined('_JEXEC') or die ('Restricted access'); ?>
                 <?php } ?>
         	</ul>
         </div>
-        <div id="navigation<?php echo $mid; ?>" class="navigation-container">
-        	<img id="prev<?php echo $mid; ?>" class="prev-button" src="<?php echo $navigation->prev; ?>" alt="<?php echo JText::_('MOD_DJIMAGESLIDER_PREVIOUS'); ?>" />
-			<img id="next<?php echo $mid; ?>" class="next-button" src="<?php echo $navigation->next; ?>" alt="<?php echo JText::_('MOD_DJIMAGESLIDER_NEXT'); ?>" />
-			<img id="play<?php echo $mid; ?>" class="play-button" src="<?php echo $navigation->play; ?>" alt="<?php echo JText::_('MOD_DJIMAGESLIDER_PLAY'); ?>" />
-			<img id="pause<?php echo $mid; ?>" class="pause-button" src="<?php echo $navigation->pause; ?>" alt="<?php echo JText::_('MOD_DJIMAGESLIDER_PAUSE'); ?>" />
-        </div>
 		<div id="cust-navigation<?php echo $mid; ?>" class="navigation-container-custom">
 			<?php $i = 0; foreach ($slides as $slide) { ?>
 				<span class="load-button<?php if ($i == 0) echo ' load-button-active'; ?>"></span>
@@ -95,5 +89,11 @@ defined('_JEXEC') or die ('Restricted access'); ?>
         </div>
     </div>
 	</div>
-	
+        <div id="navigation<?php echo $mid; ?>" class="navigation-container">
+        	<a id="prev<?php echo $mid; ?>" class="prev-button">Prev</a>
+			<a id="next<?php echo $mid; ?>" class="next-button">Next</a>
+			<img id="play<?php echo $mid; ?>" class="play-button" src="<?php echo $navigation->play; ?>" alt="<?php echo JText::_('MOD_DJIMAGESLIDER_PLAY'); ?>" />
+			<img id="pause<?php echo $mid; ?>" class="pause-button" src="<?php echo $navigation->pause; ?>" alt="<?php echo JText::_('MOD_DJIMAGESLIDER_PAUSE'); ?>" />
+        </div>
+</div>
 	<div style="clear: both"></div>

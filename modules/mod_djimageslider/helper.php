@@ -366,7 +366,6 @@ class modDJImageSliderHelper
 		
 		/* Navigation buttons */
 		#navigation'.$mid.' {
-			position: relative;
 			top: '.$arrows_top.'px; 
 			margin: 0 '.$arrows_horizontal.'px;
 			text-align: center !important;

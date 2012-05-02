@@ -71,6 +71,17 @@ p {margin:15px 0; padding:0;}
 .menu_footer li:first-child {background:none;}
 .module_copyright {text-align:center; padding: 10px 0 0 0;}
 
+/* front */
+.front #content .content {display:none;}
+#djslider-block94 {width:749px; height:421px; padding:8px 0; background:url(../images/banner_bg.png) no-repeat;}
+#djslider-block97 {padding:4px 0; height:172px; position:relative;}
+#djslider-block97 .prev-button {position:absolute; left:0; top:0; width:35px; height:172px; text-indent:-99px; overflow:hidden;
+background:url(../images/gun_left.jpg) no-repeat;}
+#djslider-block97 .next-button {position:absolute; right:0; top:0; width:35px; height:172px; text-indent:-99px; overflow:hidden;
+background:url(../images/gun_right.jpg) no-repeat;}
+#djslider-block97 .prev-button:hover {background-position:0 100%;}
+#djslider-block97 .next-button:hover {background-position:0 100%;}
+
 /* content */
 .custom_content-top {width:749px; height:60px;}
 .page-itemid103 .custom_content-top {background:url(../images/content_top_deposit.png);}
