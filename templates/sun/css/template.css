@@ -81,6 +81,7 @@ background:url(../images/gun_left.jpg) no-repeat;}
 background:url(../images/gun_right.jpg) no-repeat;}
 #djslider-block97 .prev-button:hover {background-position:0 100%;}
 #djslider-block97 .next-button:hover {background-position:0 100%;}
+#float-contactus {position: absolute; right: 10px; top: 200px;}
 
 /* content */
 .custom_content-top {width:749px; height:60px;}
