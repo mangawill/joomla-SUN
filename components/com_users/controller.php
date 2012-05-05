@@ -102,6 +102,10 @@ class UsersController extends JController
 
 					$model = $this->getModel($vName);
 					break;
+					
+				case 'active':
+					$model = $this->getModel($vName);
+					break;
 
 				default:
 					$model = $this->getModel('Login');

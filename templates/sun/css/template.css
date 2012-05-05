@@ -89,7 +89,9 @@ background:url(../images/gun_right.jpg) no-repeat;}
 .page-itemid118 .custom_content-top,
 .page-itemid119 .custom_content-top {background:url(../images/content_top_deposit.png);}
 .page-itemid102 .custom_content-top {background:url(../images/content_top_aboutus.png);}
-.page-itemid104 .custom_content-top {background:url(../images/content_top_offers.png);}
+.page-itemid104 .custom_content-top,
+.page-itemid136 .custom_content-top,
+.page-itemid137 .custom_content-top {background:url(../images/content_top_offers.png);}
 .page-itemid105 .custom_content-top {background:url(../images/content_top_game.png);}
 .page-itemid106 .custom_content-top {background:url(../images/content_top_contactus.png);}
 .page-itemid107 .custom_content-top {background:url(../images/content_top_feedback.png);}
@@ -108,3 +110,15 @@ background:url(../images/gun_right.jpg) no-repeat;}
 /* pagination */
 .pagination li {float:left; padding: 5px 10px;}
 .pagination:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+/* offers */
+#offers-content-banner {width:693px;}
+#offers-content-banner .banner {height:265px; background:url(../images/offers_banner.png) no-repeat;}
+.page-itemid136 #offers-content-banner .banner {background:url(../images/offers_banner2.png) no-repeat;}
+.page-itemid137 #offers-content-banner .banner {background:url(../images/offers_banner3.png) no-repeat;}
+#offers-content-banner .links a {width:231px; height:90px; display:block; float:left; overflow:hidden; text-indent:-99px;}
+#offers-content-banner .links a.active,
+#offers-content-banner .links a:hover {background-position:0 100% !important;}
+#offers-content-banner .links a.item1 {background:url(../images/offers_tab1.png) no-repeat;}
+#offers-content-banner .links a.item2 {background:url(../images/offers_tab2.png) no-repeat;}
+#offers-content-banner .links a.item3 {background:url(../images/offers_tab3.png) no-repeat;}
