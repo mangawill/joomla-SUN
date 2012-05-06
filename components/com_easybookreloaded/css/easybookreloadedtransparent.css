@@ -2,18 +2,18 @@
 .easy_top {height: 30px;}
 .easy_top_left {padding-left: 10px; padding-top: 5px; padding-bottom: 10px; float: left;}
 .easy_top_right {float: right; padding-right: 10px; padding-top: 5px; padding-bottom: 5px;}
-.easy_big {font-size: 16px; vertical-align: middle;}
-.easy_small {font-size: 9px; vertical-align: middle; padding-left: 10px;}
-.easy_small_red {color: #e8523e; font-size: 9px; vertical-align: middle;}
-.easy_small_notice {font-size: 0.85em; padding-left: 50px;}
-.easy_pagination {font-size: 16px; text-align:center; display: block;}
-div.easy_pagination {font-size: 16px; text-align:center; display: block;margin-top:16px;}
+.easy_big {vertical-align: middle;}
+.easy_small {vertical-align: middle; padding-left: 10px;}
+.easy_small_red {color: #e8523e; vertical-align: middle;}
+.easy_small_notice {padding-left: 50px;}
+.easy_pagination {text-align:center; display: block;}
+div.easy_pagination {text-align:center; display: block;margin-top:16px;}
 div.easy_pagination li {display: inline !important; padding: 0 5px !important;}
 .easy_align_middle {vertical-align: middle; padding-right:1px;}
 .easy_admincomment {margin-left: 10px; margin-right: 10px;  padding: 10px; padding-bottom: 15px; margin-bottom: 8px; color: #666666;}
 .easy_contact {margin-left: 10px; text-align:left; margin-right: 10px; margin-top: 8px; padding: 5px; padding-bottom: 10px; position:relative;}
 .easy_content {margin-left: 10px; text-align:left; margin-right: 10px; margin-top: 8px; padding: 10px; padding-bottom: 15px; margin-bottom: 8px;}
-.easy_title {margin-left: 10px; text-align:left; margin-right: 10px; margin-top: 8px; padding: 10px; padding-bottom: 15px; margin-bottom: 8px; font-size: 130%; font-weight: bold;}
+.easy_title {margin-left: 10px; text-align:left; margin-right: 10px; margin-top: 8px; padding: 10px; padding-bottom: 15px; margin-bottom: 8px; font-weight: bold;}
 .easy_intro {}
 .easy_entrylink{padding-top: 10px;}
 .easy_center{text-align: center;}

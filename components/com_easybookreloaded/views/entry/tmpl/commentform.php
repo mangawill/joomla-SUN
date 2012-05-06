@@ -349,7 +349,7 @@ defined('_JEXEC') or die('Restricted access');
                         }
                         ?>
                     </td>
-                    <td valign='top'><textarea style='width:245px;' rows='8' cols='50' name='gbcomment' class='inputbox'><?php echo $this->entry->gbcomment; ?></textarea></td>
+                    <td valign='top'><textarea style='width:100%;' rows='8' cols='50' name='gbcomment' class='inputbox'><?php echo $this->entry->gbcomment; ?></textarea></td>
                 </tr>
                 <tr><td></td><td><input type="checkbox" name="inform" id="inform" value="1"> <label for='inform'><?php echo JTEXT::_('COM_EASYBOOKRELOADED_INFORM'); ?></label></td></tr>
                 <tr>

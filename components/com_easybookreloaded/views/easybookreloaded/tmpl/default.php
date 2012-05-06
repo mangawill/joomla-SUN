@@ -32,6 +32,7 @@ else
 {
     echo $this->loadTemplate('header');
     echo $this->loadTemplate('entries');
+    echo '<div id="entry_container_title"></div>';
     echo '<div id="entry_container"></div>';
 
     if($this->params->get('show_count_entries'))

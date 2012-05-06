@@ -50,5 +50,3 @@ defined('_JEXEC') or die('Restricted access');
                 <br /><?php echo JTEXT::_('COM_EASYBOOKRELOADED_INTROTEXT'); ?>
             </div>
 <?php } ?>
-        <br />
-        <br />

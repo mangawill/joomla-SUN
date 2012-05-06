@@ -279,13 +279,13 @@ defined('_JEXEC') or die('Restricted access');
                 <?php if($this->params->get('enable_log', true))
                 { ?>
                     <tr>
-                        <td width='130'><?php echo JTEXT::_('COM_EASYBOOKRELOADED_IP_ADDRESS'); ?><span class='small'>*</span></td>
+                        <td width='130'><?php echo JTEXT::_('COM_EASYBOOKRELOADED_IP_ADDRESS'); ?><span class='require'>*</span></td>
                         <td><input type='text' name='gbip' style='width:245px;' class='inputbox' value='<?php echo $this->entry->ip; ?>' disabled='disabled' /></td>
                     </tr>
                 <?php }
                 ?>
                 <tr>
-                    <td width='130'><label for='gbname'><?php echo JTEXT::_('COM_EASYBOOKRELOADED_NAME'); ?></label><span class='small'>*</span></td>
+                    <td width='130'><label for='gbname'><?php echo JTEXT::_('COM_EASYBOOKRELOADED_NAME'); ?></label><span class='require'>*</span></td>
                     <?php if($this->user->guest == 1)
                     { ?>
                         <td><input type='text' name='gbname' id='gbname' style='width:245px;' class='inputbox' value='<?php echo $this->entry->gbname; ?>' /></td>
@@ -310,7 +310,7 @@ defined('_JEXEC') or die('Restricted access');
                             <?php
                             if($this->params->get('require_mail', true))
                             {
-                                echo "<span class='small'>*</span>";
+                                echo "<span class='require'>*</span>";
                             }
                             ?>
                         </td>
@@ -442,7 +442,7 @@ if($this->params->get('show_rating', true))
                             <?php
                             if($this->params->get('require_title', true))
                             {
-                                echo "<span class='small'>*</span>";
+                                echo "<span class='require'>*</span>";
                             }
                             ?>
                         </td>
@@ -499,7 +499,7 @@ if($this->params->get('show_rating', true))
                     </tr>
 <?php } ?>
                 <tr>
-                    <td width='130' valign='top'><label for='gbtext'><?php echo JTEXT::_('COM_EASYBOOKRELOADED_GUESTBOOK_ENTRY'); ?></label><span class='small'>*</span>
+                    <td width='130' valign='top'><label for='gbtext'><?php echo JTEXT::_('COM_EASYBOOKRELOADED_GUESTBOOK_ENTRY'); ?></label><span class='require'>*</span>
                         <br /><br />
             <?php
             // Switch for Smilie Support
@@ -527,12 +527,12 @@ if($this->params->get('show_rating', true))
             }
             ?>
                     </td>
-                    <td valign='top'><textarea name='gbtext' id='gbtext' class='inputbox' style='width:245px;' rows='15' cols='50'><?php echo $this->entry->gbtext; ?></textarea></td>
+                    <td valign='top'><textarea name='gbtext' id='gbtext' class='inputbox' style='width:100%;' rows='15' cols='50'><?php echo $this->entry->gbtext; ?></textarea></td>
                 </tr>
 <?php if($this->params->get('enable_spam', true) AND ($this->params->get('enable_spam_reg') OR $this->user->guest))
 { ?>
                     <tr>
-                        <td width='130'><label for='easycalccheck'><br /><?php echo JText::_('COM_EASYBOOKRELOADED_SPAM'); ?></label><span class='small'>*</span></td>
+                        <td width='130'><label for='easycalccheck'><br /><?php echo JText::_('COM_EASYBOOKRELOADED_SPAM'); ?></label><span class='require'>*</span></td>
                         <td><br /><?php echo $this->session->get('spamcheck1', null, 'easybookreloaded').' '.$this->session->get('operator', null, 'easybookreloaded').' '.$this->session->get('spamcheck2', null, 'easybookreloaded'); ?> = <input type="text" name="easycalccheck" id='easycalccheck' size="3" value="" /></td>
                     </tr>
 <?php } ?>

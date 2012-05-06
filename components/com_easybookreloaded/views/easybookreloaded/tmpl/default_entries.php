@@ -29,9 +29,9 @@ foreach($this->entries as $entry)
         <div class="easy_top" <?php if(!$entry->published)
     { ?> style="background-color: #FFE7D7;" <?php } ?>>
             <div class="easy_top_left">
-                <strong class="easy_big" id="gbentry_<?php echo $entry->id; ?>"><?php echo $entry->gbname ?></strong>
-                <strong class="easy_small">
+                <span class="point"><?php echo $entry->gbname ?></span> <?php echo JText::_('IN');?>
                     <?php
+                    echo '<span class="point">';
                     if($entry->published)
                     { // Datumsformat international
                         if($this->params->get('date_format') == 0)
@@ -53,8 +53,9 @@ foreach($this->entries as $entry)
                     {
                         echo " | </strong><strong class='easy_small_red'>".JText::_('COM_EASYBOOKRELOADED_ENTRY_OFFLINE');
                     }
+                    echo '</span>';
+                    echo ' '.JText::_('TAKE COMMENT')
                     ?>
-                </strong>
             </div>
             <div class="easy_top_right">
                 <?php
@@ -181,8 +182,7 @@ foreach($this->entries as $entry)
     <?php if($entry->gbcomment)
     { ?>
             <div class="easy_admincomment">
-        <?php echo JHTML::_('image', 'components/com_easybookreloaded/images/admin.png', JText::_('COM_EASYBOOKRELOADED_ADMIN_COMMENT:'), 'class="easy_align_middle" style="padding-bottom: 2px;"'); ?>
-                <strong><?php echo JText::_('COM_EASYBOOKRELOADED_ADMIN_COMMENT'); ?>:</strong><br />
+                <strong><?php echo JText::_('COM_EASYBOOKRELOADED_ADMIN_COMMENT'); ?>:</strong>
         <?php echo EasybookReloadedHelperContent::parse($entry->gbcomment) ?>
             </div>
     <?php } ?>

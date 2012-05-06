@@ -129,3 +129,21 @@ background:url(../images/gun_right.jpg) no-repeat;}
 .contact-us-table {margin:0 auto; background-color:#120501;}
 .contact-us-table > tbody > tr > td {padding:10px;}
 .point {color:#e97426; font-weight:bold;}
+
+/* easybook */
+#easybook_header {background:url(../images/feedback_top2.jpg) no-repeat; height:53px; padding-top:10px;}
+#easybook_header a {width:146px; height:44px; display:block; margin:0 auto; overflow:hidden; text-indent:-99px;
+background:url(../images/comment_button.png) no-repeat;}
+#easybook .easy_frame {background-color:#120501; border:1px solid #291006; padding: 10px;}
+.page-itemid107 #content .content {padding-top:0;}
+#easybook {color:#8e5328;}
+#easybook .point {color:#edab7b;}
+#easybook .easy_admincomment {background-color:#1e0902; border:1px solid #291006; color:#97440c;}
+#easybook .easy_admincomment strong {color:#d8741b;}
+#easybook form {background-color:#110501; border:1px solid #3a2017; padding:10px;}
+#easybook form td {color:#edab7b;}
+#easybook input,
+#easybook textarea {background-color:#150803; border:1px solid #3a2017; color:#fff;}
+#easysubmit input {width:113px; height:40px; background:url(../images/button.png); border:none; font-weight:bold; cursor:pointer;}
+#easybook .require {color:red;}
+#entry_container_title {height:23px; background:url(../images/iwantcomment.jpg) no-repeat;}
