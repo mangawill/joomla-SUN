@@ -1,7 +1,8 @@
 /* TEMPLATE CSS
 *********************************************/
 html {height:100%; margin-bottom:1px; overflow-y:scroll;}
-body {background:url(../images/bg.png) center; color:#d8a380; font:normal normal normal 75%/125% arial,sans-serif; height:100%; text-align:center;}
+body {background:url(../images/bg.png) center; color:#ba7e5b; font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+line-height:1.5; height:100%; text-align:center;}
 li {margin:0; padding:0; list-style:none;}
 a {text-decoration:none; color:#d8a380;}
 a:hover {text-decoration:underline;}
@@ -103,6 +104,7 @@ background:url(../images/gun_right.jpg) no-repeat;}
 .deposit_link a.get {background:url(../images/deposit_get.png);}
 .deposit_link a:hover,
 .deposit_link a.active {background-position:0 100%;}
+#content h1 {color:#db9e0a; font-weight:bold; margin:15px 0; font-size:120%;}
 
 /* breadcrumbs */
 .breadcrumbs {position: absolute; right: 20px; top: 30px;}
@@ -122,3 +124,8 @@ background:url(../images/gun_right.jpg) no-repeat;}
 #offers-content-banner .links a.item1 {background:url(../images/offers_tab1.png) no-repeat;}
 #offers-content-banner .links a.item2 {background:url(../images/offers_tab2.png) no-repeat;}
 #offers-content-banner .links a.item3 {background:url(../images/offers_tab3.png) no-repeat;}
+
+/* contact us */
+.contact-us-table {margin:0 auto; background-color:#120501;}
+.contact-us-table > tbody > tr > td {padding:10px;}
+.point {color:#e97426; font-weight:bold;}
