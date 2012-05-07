@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="default"
+		label="COM_USERS_REGISTRATION_DEFAULT_LABEL"
+	>
+
+		<field name="username" type="text"
+			class="validate-username inputbox"
+			label="COM_USERS_REGISTER_USERNAME_LABEL"
+			message="COM_USERS_REGISTER_USERNAME_MESSAGE"
+			required="true"
+		/>
+
+		<field name="password1" type="password"
+			autocomplete="off"
+			class="validate-password inputbox"
+			label="COM_USERS_REGISTER_PASSWORD1_LABEL"
+			message="COM_USERS_REGISTER_PASSWORD1_MESSAGE"
+			required="true"
+			description="默认密码为：a123432"
+		/>
+        
+        <field name="currency" type="list" 
+        label="Currency" 
+        class="inputbox">
+                <option value="RMB">RMB</option>
+        </field>
+
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_USERS_CAPTCHA_LABEL"
+			validate="captcha"
+            class="inputbox"
+		/>
+	</fieldset>
+    <fieldset name="information"
+        label="会员资料">
+
+        <field name="name" type="text"
+            label="COM_USERS_REGISTER_NAME_LABEL"
+            message="COM_USERS_REGISTER_NAME_MESSAGE"
+            required="true"
+            class="inputbox"
+        />
+
+        <field name="email1" type="email"
+            field="id"
+            label="COM_USERS_REGISTER_EMAIL1_LABEL"
+            message="COM_USERS_REGISTER_EMAIL1_MESSAGE"
+            required="true"
+            validate="email"
+            class="inputbox"
+        />
+        
+        <field name="qq" type="text" 
+        label="QQ" 
+        class="inputbox"/>
+        
+        <field name="phone" type="text" 
+        label="Mobile" 
+        class="inputbox"/>
+        
+        <field name="getpassword" type="text" 
+        label="Get Password" 
+        class="inputbox"/>
+    </fieldset>
+</form>

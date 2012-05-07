@@ -144,6 +144,22 @@ background:url(../images/comment_button.png) no-repeat;}
 #easybook form td {color:#edab7b;}
 #easybook input,
 #easybook textarea {background-color:#150803; border:1px solid #3a2017; color:#fff;}
-#easysubmit input {width:113px; height:40px; background:url(../images/button.png); border:none; font-weight:bold; cursor:pointer;}
+button.button,
+#content input[type='submit'],
+input.button {width:113px; height:40px; background:url(../images/button.png); border:none !important; font-weight:bold; cursor:pointer; color:#fff; font-size:120%; padding-bottom:5px;;}
 #easybook .require {color:red;}
 #entry_container_title {height:23px; background:url(../images/iwantcomment.jpg) no-repeat;}
+
+/* register */
+.registration legend {color:#ffb17d; border-bottom:2px solid #3a1a0f; padding:10px 0; display:block; width:100%; margin: 0 0 15px 0; font-size:120%;}
+.registration fieldset {margin:0 0 15px 0;}
+.registration dl {padding: 0 0 0 15px;}
+.registration dt {display:block; width: 100px; float:left;}
+.registration dd {height:40px;}
+.registration .inputbox {background-color:#100501; border:1px solid #26110a; margin-right:20px; width:200px; height:23px; color:#9c5136;}
+.registration .checkboxs {padding:15px 0;}
+
+/* form */
+.aiContactSafe_contact_form_field_label_left {width:150px;}
+#content input[type="text"],
+#content select {background-color:#100501; border:1px solid #26110a; margin-right:20px; width:200px; height:23px; color:#9c5136;}
