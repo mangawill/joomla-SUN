@@ -163,3 +163,13 @@ input.button {width:113px; height:40px; background:url(../images/button.png); bo
 .aiContactSafe_contact_form_field_label_left {width:150px;}
 #content input[type="text"],
 #content select {background-color:#100501; border:1px solid #26110a; margin-right:20px; width:200px; height:23px; color:#9c5136;}
+
+/* category */
+.page-itemid105 .blog {padding:20px 0 0 15px;}
+.page-itemid105 .blog .items-row p {margin:0 0 5px 0;}
+.page-itemid105 .blog .items-row {width:305px; height:147px; margin:0 20px 15px 0; float:left; padding:10px;
+background:url(../images/category_frame.png) no-repeat;}
+.page-itemid105 .blog .items-row h2.title {font-size:120%; height:45px; line-height:36px;}
+.page-itemid105 .blog .items-row h2.title a {font-weight:bold; color:#fedcac;}
+.page-itemid105 .blog .img-intro-left {float:left;}
+.page-itemid105 .blog .img-intro-left img {padding:5px; border:1px solid #4c1e11; margin-right:5px;}
