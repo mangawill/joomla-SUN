@@ -82,7 +82,9 @@ background:url(../images/gun_left.jpg) no-repeat;}
 background:url(../images/gun_right.jpg) no-repeat;}
 #djslider-block97 .prev-button:hover {background-position:0 100%;}
 #djslider-block97 .next-button:hover {background-position:0 100%;}
-#float-contactus {position: absolute; right: 10px; top: 200px;}
+#float-contactus {position: absolute; right: 10px; top: 200px; z-index:9990;}
+#float-contactus .links {position:absolute; z-index:9991; bottom:14px;}
+#float-contactus .links a {float:left; margin:0 9px;}
 
 /* content */
 .custom_content-top {width:749px; height:70px;}
@@ -105,6 +107,7 @@ background:url(../images/gun_right.jpg) no-repeat;}
 .deposit_link a:hover,
 .deposit_link a.active {background-position:0 100%;}
 #content h1 {color:#db9e0a; font-weight:bold; margin:15px 0; font-size:120%;}
+a.qq {width:74px; height:22px; display:block; background:url(../images/qq.png); overflow:hidden; text-indent:-99px;}
 
 /* breadcrumbs */
 .breadcrumbs {position: absolute; right: 20px; top: 30px;}
@@ -129,6 +132,9 @@ background:url(../images/gun_right.jpg) no-repeat;}
 .contact-us-table {margin:0 auto; background-color:#120501;}
 .contact-us-table > tbody > tr > td {padding:10px;}
 .point {color:#e97426; font-weight:bold;}
+
+/* about us */
+.page-itemid102 #content .item-page {background:url(../images/bg_adorn.png) right bottom no-repeat; margin-right: -10px; padding-right: 10px;}
 
 /* easybook */
 #easybook_header {background:url(../images/feedback_top2.jpg) no-repeat; height:53px; padding-top:10px;}
