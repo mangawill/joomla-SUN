@@ -64,12 +64,16 @@ class UsersControllerActive extends UsersController
 			$app->setUserState('com_users.active.data', $requestData);
 
 			// Redirect back to the registration screen.
-			$this->setRedirect(JRoute::_('index.php?option=com_users&view=active', false));
+			$this->setRedirect('index.php?option=com_users&view=active&Itemid=115');
 			return false;
 		}
 
-		// Attempt to save the data.
+		// Attempt to save the data
 		$return	= $model->active($data);
+		
+		$user = array();
+		$user['username']	= $data['username'];
+		$user['password']	= $data['password1'];
 
 		// Check for errors.
 		if ($return === false) {
@@ -78,7 +82,7 @@ class UsersControllerActive extends UsersController
 
 			// Redirect back to the edit screen.
 			$this->setMessage($model->getError());
-			$this->setRedirect(JRoute::_('index.php?option=com_users&view=active', false));
+			$this->setRedirect('index.php?option=com_users&view=active&Itemid=115');
 			return false;
 		}
 		
@@ -86,9 +90,11 @@ class UsersControllerActive extends UsersController
 
 		// Flush the data from the session.
 		$app->setUserState('com_users.active.data', null);
+		
+		$userCode = base64_encode(serialize($user));
 
 		// Redirect to the profile screen.
-		$this->setRedirect(JRoute::_('index.php?option=com_users&view=active&layout=complete', false));
+		$this->setRedirect('index.php?option=com_users&view=active&Itemid=115&layout=complete&usercode='.$userCode);
 
 
 		return true;

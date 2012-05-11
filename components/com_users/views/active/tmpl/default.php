@@ -42,8 +42,8 @@ JHtml::_('behavior.formvalidation');
 	<?php endif;?>
 <?php endforeach;?>
 <div class="checkboxs">
-	<div class="checkbox"><input id="checkbox_adult" type="checkbox"/>我已阅读并且同意太阳城亚洲的规则与条款</div>
-	<div class="checkbox"><input id="checkbox_terms" type="checkbox"/>我声明我已经年满18岁</div>
+	<div class="checkbox"><input id="checkbox_adult" type="checkbox" aria-required="true" required="true"/>我已阅读并且同意太阳城亚洲的规则与条款</div>
+	<div class="checkbox"><input id="checkbox_terms" type="checkbox" aria-required="true" required="true"/>我声明我已经年满18岁</div>
 </div>
 		<div>
 			<button type="submit" class="validate button">确认提交</button>

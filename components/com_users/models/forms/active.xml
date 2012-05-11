@@ -4,7 +4,7 @@
 		label="COM_USERS_REGISTRATION_DEFAULT_LABEL"
 	>
 
-		<field name="username" type="text"
+		<field name="username" type="Sunuser"
 			class="validate-username inputbox"
 			label="COM_USERS_REGISTER_USERNAME_LABEL"
 			message="COM_USERS_REGISTER_USERNAME_MESSAGE"

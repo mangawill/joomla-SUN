@@ -8,7 +8,9 @@
  */
 
 defined('_JEXEC') or die;
+$userCode = JRequest::getVar('usercode');
+$user = unserialize(base64_decode($userCode));
 ?>
 <div class="registration-complete<?php echo $this->pageclass_sfx;?>">
-<?php echo JText::sprintf('ACTIVE_COMPLETE', 'user', 'pass'); ?>
+<?php echo JText::sprintf('ACTIVE_COMPLETE', $user['username'], $user['password']); ?>
 </div>
