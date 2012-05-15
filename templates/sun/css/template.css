@@ -74,7 +74,8 @@ p {margin:15px 0; padding:0;}
 
 /* front */
 .front #content .content {display:none;}
-#djslider-block94 {width:749px; height:421px; padding:8px 0; background:url(../images/banner_bg.png) no-repeat;}
+.swf-home-banner,
+#djslider-block94 {width:749px; height:421px; padding:8px; background:url(../images/banner_bg.png) no-repeat;}
 #djslider-block97 {padding:4px 0; height:172px; position:relative;}
 #djslider-block97 .prev-button {position:absolute; left:0; top:0; width:35px; height:172px; text-indent:-99px; overflow:hidden;
 background:url(../images/gun_left.jpg) no-repeat;}
