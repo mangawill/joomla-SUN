@@ -1,0 +1,4 @@
+.marquee-container {clear:both; overflow:hidden;}
+.marquee-container:after {clear:both;}
+.marquee-container ul {list-style:none;}
+.marquee-container li {list-style:none; float:left; padding:0 16px 0 0;} 
