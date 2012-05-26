@@ -7,7 +7,6 @@ window.addEvent("domready", function(){
 	    	container.addClass("ajax-loading");
 	    },
 	    onSuccess: function(responseElements){
-	    	console.log(responseElements);
 	    	container.removeClass("ajax-loading");
 	    	container.empty().adopt(responseElements);
 	    },

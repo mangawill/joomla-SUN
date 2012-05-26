@@ -215,7 +215,43 @@ class UsersModelActive extends JModelForm
 			return false;
 		}
 		
+		// send mail
+		$this->sendAdminMail($user);
+		
 		return true;
+	}
+	
+	public function sendAdminMail($user)
+	{
+		$app	= JFactory::getApplication();
+		$acl	= JFactory::getACL();
+		$db		= $this->getDbo();
+		$groupId = 8;
+		$subject = '太阳城新用户注册';
+		$body = '用户名'.$user->name."\r\n";
+		$body .= '电子邮箱'.$user->email."\r\n";
+		$body .= '移动电话'.$user->phone."\r\n";
+		$body .= 'QQ'.$user->qq."\r\n";
+		$body .= '取款密码'.$user->getpassword."\r\n";
+		
+		$uIds = $acl->getUsersByGroup($groupId, false);
+		$query	= $db->getQuery(true);
+		$query->select('email');
+		$query->from('#__users');
+		$query->where('id IN (' . implode(',', $uIds) . ')');
+		$query->where("block = 0");
+		$db->setQuery($query);
+		$rows = $db->loadColumn();
+		
+		$mailer = JFactory::getMailer();
+		$mailer->setSender(array($app->getCfg('mailfrom'), $app->getCfg('fromname')));
+		$mailer->setSubject($subject);
+		$mailer->setBody($body);
+		//$mailer->IsHTML(true);
+		$mailer->addRecipient($rows);
+		if (!$mailer->Send()) {
+		  JError::raiseWarning(500, JText::_('ERROR_SENDING_EMAIL'));
+		}
 	}
 	
 	public function used()
