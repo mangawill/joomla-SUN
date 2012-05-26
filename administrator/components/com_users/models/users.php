@@ -42,6 +42,7 @@ class UsersModelUsers extends JModelList
 				'registerDate', 'a.registerDate',
 				'lastvisitDate', 'a.lastvisitDate',
 				'activation', 'a.activation',
+				'used', 'a.used'
 			);
 		}
 
