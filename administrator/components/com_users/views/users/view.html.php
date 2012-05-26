@@ -57,6 +57,7 @@ class UsersViewUsers extends JView
 
 		if ($canDo->get('core.create')) {
 			JToolBarHelper::addNew('user.add');
+			JToolBarHelper::custom('user.import','unblock.png', 'unblock_f2.png', 'Import', false);
 		}
 		if ($canDo->get('core.edit')) {
 			JToolBarHelper::editList('user.edit');

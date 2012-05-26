@@ -105,4 +105,63 @@ class UsersControllerUser extends JControllerForm
 
 		return parent::save();
 	}
+	
+	public function import()
+	{
+		// Initialise variables.
+		$app = JFactory::getApplication();
+		$context = "$this->option.import.$this->context";
+
+		// Access check.
+		if (!$this->allowAdd())
+		{
+			// Set the internal error and also the redirect error.
+			$this->setError(JText::_('JLIB_APPLICATION_ERROR_CREATE_RECORD_NOT_PERMITTED'));
+			$this->setMessage($this->getError(), 'error');
+
+			$this->setRedirect(
+				JRoute::_(
+					'index.php?option=' . $this->option . '&view=' . $this->view_list
+					. $this->getRedirectToListAppend(), false
+				)
+			);
+
+			return false;
+		}
+
+		// Clear the record edit information from the session.
+		$app->setUserState($context . '.data', null);
+
+		// Redirect to the edit screen.
+		$this->setRedirect(
+			JRoute::_(
+				'index.php?option=' . $this->option . '&view=' . $this->view_item
+				. '&layout=import', false
+			)
+		);
+
+		return true;
+	}
+	
+	public function doImport() {
+		ini_set('max_execution_time', '180');
+		require(JPATH_COMPONENT.DS.'helpers'.DS.'CSVHelper.php');
+		
+		$data = CSVHelper::csvFileToArray('csv', array('name', 'pass'));
+		$model = $this->getModel();
+		$hasError = false;
+		foreach($data as $row) {
+			if(!$model->create($row['name'], $row['pass'], $row['name'].'rand@sunuser.com')) {
+				$hasError = true;
+			}
+		}
+			
+		$this->setRedirect(
+			JRoute::_(
+				'index.php?option=com_users&view=' . $this->view_list
+				. $this->getRedirectToListAppend(), false
+			)
+		);
+		return true;
+	} 
 }

@@ -57,16 +57,17 @@ class UsersViewUser extends JView
 		$isNew		= ($this->item->id == 0);
 		$canDo		= UsersHelper::getActions();
 
-
 		$isNew	= ($this->item->id == 0);
 		$isProfile = $this->item->id == $user->id;
 		JToolBarHelper::title(JText::_($isNew ? 'COM_USERS_VIEW_NEW_USER_TITLE' : ($isProfile ? 'COM_USERS_VIEW_EDIT_PROFILE_TITLE' : 'COM_USERS_VIEW_EDIT_USER_TITLE')), $isNew ? 'user-add' : ($isProfile ? 'user-profile' : 'user-edit'));
-		if ($canDo->get('core.edit')||$canDo->get('core.create')) {
-			JToolBarHelper::apply('user.apply');
-			JToolBarHelper::save('user.save');
-		}
-		if ($canDo->get('core.create')&&$canDo->get('core.manage')) {
-			JToolBarHelper::save2new('user.save2new');
+		if(JRequest::getVar('layout') != 'import') {
+			if ($canDo->get('core.edit')||$canDo->get('core.create')) {
+				JToolBarHelper::apply('user.apply');
+				JToolBarHelper::save('user.save');
+			}
+			if ($canDo->get('core.create')&&$canDo->get('core.manage')) {
+				JToolBarHelper::save2new('user.save2new');
+			}
 		}
 		if (empty($this->item->id))  {
 			JToolBarHelper::cancel('user.cancel');

@@ -74,6 +74,9 @@ $loggeduser = JFactory::getUser();
 				<th class="nowrap" width="5%">
 					<?php echo JHtml::_('grid.sort', 'COM_USERS_HEADING_ACTIVATED', 'a.activation', $listDirn, $listOrder); ?>
 				</th>
+				<th class="nowrap">
+					<?php echo JHtml::_('grid.sort', 'Used', 'a.used', $listDirn, $listOrder); ?>
+				</th>
 				<th class="nowrap" width="10%">
 					<?php echo JText::_('COM_USERS_HEADING_GROUPS'); ?>
 				</th>
@@ -147,6 +150,9 @@ $loggeduser = JFactory::getUser();
 				</td>
 				<td class="center">
 					<?php echo JHtml::_('grid.boolean', $i, !$item->activation, 'users.activate', null); ?>
+				</td>
+				<td class="center">
+					<a class="<?php echo $item->used ? 'grid_true' : 'grid_false' ?>"></a>
 				</td>
 				<td class="center">
 					<?php if (substr_count($item->group_names, "\n") > 1) : ?>

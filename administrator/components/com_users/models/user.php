@@ -689,4 +689,22 @@ class UsersModelUser extends JModelAdmin
 
 		return $result;
 	}
+	
+	public function create($name, $pass, $mail) {
+		if($name == '') return true;
+		$user = new JUser();
+		$user->groups = array(2);
+		$user->name = $user->username = $name;
+		$user->email = $mail;
+		$salt = JUserHelper::genRandomPassword(32);
+		$crypt = JUserHelper::getCryptedPassword($pass, $salt);
+		$user->password = $crypt . ':' . $salt;
+		
+		if(!$user->save()) {
+			JError::raiseWarning(500, $user->getError());
+			//$this->setError($user->getError());
+			return false;
+		}
+		return true;
+	}
 }
