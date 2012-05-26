@@ -228,11 +228,11 @@ class UsersModelActive extends JModelForm
 		$db		= $this->getDbo();
 		$groupId = 8;
 		$subject = '太阳城新用户注册';
-		$body = '用户名'.$user->name."\r\n";
-		$body .= '电子邮箱'.$user->email."\r\n";
-		$body .= '移动电话'.$user->phone."\r\n";
-		$body .= 'QQ'.$user->qq."\r\n";
-		$body .= '取款密码'.$user->getpassword."\r\n";
+		$body = '用户名: '.$user->name."\r\n";
+		$body .= '电子邮箱: '.$user->email."\r\n";
+		$body .= '移动电话: '.$user->phone."\r\n";
+		$body .= 'QQ: '.$user->qq."\r\n";
+		$body .= '取款密码: '.$user->getpassword."\r\n";
 		
 		$uIds = $acl->getUsersByGroup($groupId, false);
 		$query	= $db->getQuery(true);
