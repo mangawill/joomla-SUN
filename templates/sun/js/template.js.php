@@ -24,4 +24,5 @@ header($ExpStr);
 require('../../../media/system/js/mootools-core.js');
 require('../../../media/system/js/core.js');
 require('../../../media/system/js/caption.js');
+require('start.js');
 ?>

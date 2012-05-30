@@ -55,18 +55,7 @@ class JFormFieldSunuser extends JFormField
 	
 	private function getDefault()
 	{
-		$db = JFactory::getDbo();
-		$query = $db->getQuery(true);
-		$query->from('#__users AS users')
-			->join('INNER', '#__user_usergroup_map AS usergroup_map ON usergroup_map.user_id = users.id')
-			->where('users.used=0 AND usergroup_map.group_id=2')
-			->select('users.*');
-		$db->setQuery($query, 0, 1);
-		$user = $db->loadObject();
-		if($user) {
-			return $user->username;
-		} else {
-			return '';
-		}
+		$model = JModel::getInstance('Active', 'UsersModel', array('ignore_request' => true));
+		return $model->getUserName();
 	}
 }

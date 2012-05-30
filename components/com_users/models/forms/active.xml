@@ -8,6 +8,7 @@
 			class="validate-username inputbox"
 			label="COM_USERS_REGISTER_USERNAME_LABEL"
 			message="COM_USERS_REGISTER_USERNAME_MESSAGE"
+			description=""
 			required="true"
 		/>
 
@@ -16,8 +17,8 @@
 			class="validate-password inputbox"
 			label="COM_USERS_REGISTER_PASSWORD1_LABEL"
 			message="COM_USERS_REGISTER_PASSWORD1_MESSAGE"
-			required="true"
-			description="默认密码为：a123432"
+			required="true" default="a123a123"
+			description="默认密码为：a123a123"
 		/>
         
         <field name="currency" type="list" 

@@ -99,4 +99,11 @@ class UsersControllerActive extends UsersController
 
 		return true;
 	}
+	
+	public function getUserName()
+	{		
+		$model = JModel::getInstance('Active', 'UsersModel', array('ignore_request' => true));
+		echo $model->getUserName();
+		jexit();
+	}
 }

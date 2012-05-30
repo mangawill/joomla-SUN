@@ -147,11 +147,11 @@ class UsersControllerUser extends JControllerForm
 		ini_set('max_execution_time', '180');
 		require(JPATH_COMPONENT.DS.'helpers'.DS.'CSVHelper.php');
 		
-		$data = CSVHelper::csvFileToArray('csv', array('name', 'pass'));
+		$data = CSVHelper::csvFileToArray('csv', array('parent', 'name'));
 		$model = $this->getModel();
 		$hasError = false;
 		foreach($data as $row) {
-			if(!$model->create($row['name'], $row['pass'], $row['name'].'rand@sunuser.com')) {
+			if(!$model->create($row['name'], 'a123a123', $row['name'].'rand@sunuser.com')) {
 				$hasError = true;
 			}
 		}

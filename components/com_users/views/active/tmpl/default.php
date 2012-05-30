@@ -12,6 +12,7 @@ defined('_JEXEC') or die;
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
+JHtml::_('behavior.modal');
 ?>
 <div class="registration<?php echo $this->pageclass_sfx?>">
 <?php if ($this->params->get('show_page_heading')) : ?>
@@ -34,7 +35,7 @@ JHtml::_('behavior.formvalidation');
 				<dt>
 				<?php echo $field->label; ?>
 				</dt>
-				<dd><?php echo $field->input;?> <?php echo $field->description;?></dd>
+				<dd><?php echo $field->input;?> <?php echo $field->description;?> <a href="javascript:void(0)" id="<?php echo $field->id ?>_suffix"></a></dd>
 			<?php endif;?>
 		<?php endforeach;?>
 			</dl>
@@ -42,7 +43,7 @@ JHtml::_('behavior.formvalidation');
 	<?php endif;?>
 <?php endforeach;?>
 <div class="checkboxs">
-	<div class="checkbox"><input id="checkbox_adult" type="checkbox" aria-required="true" required="true"/>我已阅读并且同意太阳城亚洲的规则与条款</div>
+	<div class="checkbox"><input id="checkbox_adult" type="checkbox" aria-required="true" required="true"/>我已阅读并且同意太阳城的<a class="modal" rel="{handler: 'iframe', size: {x: 875, y: 550}}" href="index.php?option=com_content&view=article&id=56&tmpl=modal">规则与条款</a> </div>
 	<div class="checkbox"><input id="checkbox_terms" type="checkbox" aria-required="true" required="true"/>我声明我已经年满18岁</div>
 </div>
 		<div>

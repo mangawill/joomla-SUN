@@ -20,11 +20,6 @@ $user		= JFactory::getUser();
 
 ?>
 <div class="item-page<?php echo $this->pageclass_sfx?>">
-<?php if ($this->params->get('show_page_heading', 1)) : ?>
-	<h1>
-	<?php echo $this->escape($this->params->get('page_heading')); ?>
-	</h1>
-<?php endif; ?>
 <?php
 if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
 {
