@@ -217,6 +217,7 @@ class UsersModelActive extends JModelForm
 		
 		// send mail
 		$this->sendAdminMail($user);
+		$this->sendClientMail($user);
 		
 		return true;
 	}
@@ -228,11 +229,10 @@ class UsersModelActive extends JModelForm
 		$db		= $this->getDbo();
 		$groupId = 8;
 		$subject = '太阳城新用户注册';
-		$body = '用户名: '.$user->name."\r\n";
+		$body = '用户名: '.$user->username."\r\n";
 		$body .= '电子邮箱: '.$user->email."\r\n";
 		$body .= '移动电话: '.$user->phone."\r\n";
 		$body .= 'QQ: '.$user->qq."\r\n";
-		$body .= '取款密码: '.$user->getpassword."\r\n";
 		
 		$uIds = $acl->getUsersByGroup($groupId, false);
 		$query	= $db->getQuery(true);
@@ -249,6 +249,32 @@ class UsersModelActive extends JModelForm
 		$mailer->setBody($body);
 		//$mailer->IsHTML(true);
 		$mailer->addRecipient($rows);
+		if (!$mailer->Send()) {
+		  JError::raiseWarning(500, JText::_('ERROR_SENDING_EMAIL'));
+		}
+	}
+	
+	public function sendClientMail($user)
+	{
+		$app	= JFactory::getApplication();
+		$acl	= JFactory::getACL();
+		$db		= $this->getDbo();
+		$subject = '太阳城新用户注册';
+		
+		$username = $user->username;
+		$email = $user->email;
+		$phone = $user->phone;
+		ob_start();
+		include(JPATH_COMPONENT.DS.'views'.DS.'active'.DS.'tmpl'.DS.'mail.php');
+		$body = ob_get_contents();
+		ob_end_clean();
+		
+		$mailer = JFactory::getMailer();
+		$mailer->setSender(array($app->getCfg('mailfrom'), $app->getCfg('fromname')));
+		$mailer->setSubject($subject);
+		$mailer->setBody($body);
+		$mailer->IsHTML(true);
+		$mailer->addRecipient($user->email);
 		if (!$mailer->Send()) {
 		  JError::raiseWarning(500, JText::_('ERROR_SENDING_EMAIL'));
 		}

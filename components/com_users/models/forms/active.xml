@@ -18,7 +18,7 @@
 			label="COM_USERS_REGISTER_PASSWORD1_LABEL"
 			message="COM_USERS_REGISTER_PASSWORD1_MESSAGE"
 			required="true" default="a123a123"
-			description="默认密码为：a123a123"
+			description="请勿修改"
 		/>
         
         <field name="currency" type="list" 
@@ -42,7 +42,7 @@
             label="COM_USERS_REGISTER_NAME_LABEL"
             message="COM_USERS_REGISTER_NAME_MESSAGE"
             required="true"
-            class="inputbox"
+            class="inputbox" description="必须与您的银行账户名称相同，否则不能提款！"
         />
 
         <field name="email1" type="email"
@@ -59,11 +59,7 @@
         class="inputbox"/>
         
         <field name="phone" type="text" 
-        label="Mobile" 
-        class="inputbox"/>
-        
-        <field name="getpassword" type="text" 
-        label="Get Password" 
+        label="Mobile" description="请填写真实的手机号码,以便我们提供更好的服务!"
         class="inputbox"/>
     </fieldset>
 </form>

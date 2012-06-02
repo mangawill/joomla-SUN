@@ -43,7 +43,7 @@ JHtml::_('behavior.modal');
 	<?php endif;?>
 <?php endforeach;?>
 <div class="checkboxs">
-	<div class="checkbox"><input id="checkbox_adult" type="checkbox" aria-required="true" required="true"/>我已阅读并且同意太阳城的<a class="modal" rel="{handler: 'iframe', size: {x: 875, y: 550}}" href="index.php?option=com_content&view=article&id=56&tmpl=modal">规则与条款</a> </div>
+	<div class="checkbox"><input id="checkbox_adult" type="checkbox" aria-required="true" required="true"/>我已阅读并且同意太阳城的<a style="color:red" class="modal" rel="{handler: 'iframe', size: {x: 875, y: 550}}" href="index.php?option=com_content&view=article&id=56&tmpl=modal">规则与条款</a> </div>
 	<div class="checkbox"><input id="checkbox_terms" type="checkbox" aria-required="true" required="true"/>我声明我已经年满18岁</div>
 </div>
 		<div>
