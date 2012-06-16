@@ -9,7 +9,7 @@ class JConfig {
 	public $captcha = '0';
 	public $list_limit = '20';
 	public $access = '1';
-	public $debug = '1';
+	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
@@ -30,13 +30,13 @@ class JConfig {
 	public $ftp_enable = '0';
 	public $offset = 'UTC';
 	public $offset_user = 'UTC';
-	public $mailer = 'mail';
+	public $mailer = 'smtp';
 	public $mailfrom = 'william0760@qq.com';
 	public $fromname = '太阳城';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
-	public $smtpuser = '';
-	public $smtppass = '';
+	public $smtpuser = 'admin';
+	public $smtppass = 'admin';
 	public $smtphost = 'localhost';
 	public $smtpsecure = 'none';
 	public $smtpport = '25';
